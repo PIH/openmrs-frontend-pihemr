@@ -38,18 +38,18 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sontatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sontatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/public</url>
+            <url>https://s01.oss.sontatype.org/content/repositories/public</url>
         </repository>
     </repositories>
 
