@@ -22,7 +22,7 @@ git fetch central
 
 # For these to work, it's important that the Bamboo has git repository caching disabled for this repo/job.
 # Reset
-git reset --hard central/master
+git reset --hard central/main
 # Clean up stray local tags that didn't get pushed
 git tag -l | xargs git tag -d
 git fetch central --tags
@@ -47,5 +47,5 @@ sed -i "0,/<\/version>/{s/version>.*<\/version/version>${DEVELOPMENT_VERSION}<\/
 git add pom.xml
 if ! git diff --cached --exit-code; then
   git commit -m "update to ${DEVELOPMENT_VERSION}"
-  git push central master
+  git push central main
 fi
