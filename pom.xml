@@ -9,6 +9,7 @@
     <version>1.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>PIH EMR Frontend</name>
+    <url>https://github.com/PIH/openmrs-frontend-pihemr</url>
     <description>Frontend project for PIH EMR</description>
 
     <organization>
