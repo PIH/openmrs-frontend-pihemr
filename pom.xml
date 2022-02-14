@@ -6,7 +6,7 @@
 
     <groupId>org.pih.openmrs</groupId>
     <artifactId>openmrs-frontend-pihemr</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>PIH EMR Frontend</name>
     <description>Frontend project for PIH EMR</description>
