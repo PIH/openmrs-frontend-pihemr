@@ -6,6 +6,7 @@
     "@openmrs/esm-home-app": "next",
     "@openmrs/esm-active-visits-app": "next",
     "@openmrs/esm-primary-navigation-app": "next",
+    "@openmrs/esm-patient-search-app": "next",
     "@openmrs/esm-patient-registration-app": "next",
     "@openmrs/esm-patient-list-app": "next",
     "@openmrs/esm-offline-tools-app": "next",
