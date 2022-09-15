@@ -25,7 +25,8 @@
     "@openmrs/esm-patient-notes-app": "next",
     "@openmrs/esm-patient-programs-app": "next",
     "@openmrs/esm-patient-test-results-app": "next",
-    "@openmrs/esm-patient-vitals-app": "next"
+    "@openmrs/esm-patient-vitals-app": "next",
+    "@openmrs/esm-dispensing-app": "next"
   },
   "configUrls":[
     "site/base-config.json",
