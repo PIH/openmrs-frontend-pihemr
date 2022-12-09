@@ -93,7 +93,7 @@
                             <goal>npx</goal>
                         </goals>
                         <configuration>
-                            <arguments>openmrs@next build --build-config spa-build-config.json --target target/dist</arguments>
+                            <arguments>openmrs@latest build --build-config spa-build-config.json --target target/dist</arguments>
                         </configuration>
                     </execution>
                     <execution>
@@ -102,7 +102,7 @@
                             <goal>npx</goal>
                         </goals>
                         <configuration>
-                            <arguments>openmrs@next assemble --mode config --config spa-build-config.json --target target/dist</arguments>
+                            <arguments>openmrs@latest assemble --mode config --config spa-build-config.json --target target/dist</arguments>
                         </configuration>
                     </execution>
                 </executions>
