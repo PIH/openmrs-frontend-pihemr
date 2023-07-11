@@ -103,21 +103,21 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>Build frontend application</id>
-                        <goals>
-                            <goal>npx</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>openmrs@next build --build-config spa-build-config.json --target target/dist</arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>Assemble frontend modules</id>
                         <goals>
                             <goal>npx</goal>
                         </goals>
                         <configuration>
-                            <arguments>openmrs@next assemble --mode config --config spa-build-config.json --target target/dist</arguments>
+                            <arguments>--legacy-peer-deps openmrs@next assemble --mode config --config spa-build-config.json --target target/dist</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Build frontend application</id>
+                        <goals>
+                            <goal>npx</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>--legacy-peer-deps openmrs@next build --build-config spa-build-config.json --target target/dist</arguments>
                         </configuration>
                     </execution>
                 </executions>
