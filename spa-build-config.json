@@ -37,5 +37,6 @@
   "configUrls":[
     "site/base-config.json",
     "site/config.json"
-  ]
+  ],
+  "supportOffline": false
 }
