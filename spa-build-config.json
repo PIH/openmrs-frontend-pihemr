@@ -33,7 +33,8 @@
     "@openmrs/esm-dispensing-app": "next",
     "@openmrs/esm-fast-data-entry-app": "next",
     "@openmrs/esm-cohort-builder-app": "next",
-    "@openmrs/esm-form-builder-app": "next"
+    "@openmrs/esm-form-builder-app": "next",
+    "@openmrs/esm-ward-app": "next"
   },
   "configUrls":[
     "site/base-config.json",
