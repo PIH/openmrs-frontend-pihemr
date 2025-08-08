@@ -98,7 +98,7 @@
                             <goal>npx</goal>
                         </goals>
                         <configuration>
-                            <arguments>--legacy-peer-deps openmrs@next build --build-config spa-build-config.json --target target/dist</arguments>
+                            <arguments>--legacy-peer-deps openmrs@next build --asset assets/hotjar.js --build-config spa-build-config.json --target target/dist</arguments>
                         </configuration>
                     </execution>
                 </executions>
