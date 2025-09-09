@@ -6,7 +6,7 @@
 
     <groupId>org.pih.openmrs</groupId>
     <artifactId>openmrs-frontend-pihemr</artifactId>
-    <version>1.17.0</version>
+    <version>1.18.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>PIH EMR Frontend</name>
     <url>https://github.com/PIH/openmrs-frontend-pihemr</url>
