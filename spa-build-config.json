@@ -1,6 +1,7 @@
 {
   "frontendModules":{
     "@pih/esm-commons-app":"next",
+    "@pih/esm-referrals-queue-app":"next",
 
     "@openmrs/esm-active-visits-app": "next",
     "@openmrs/esm-appointments-app": "next",
