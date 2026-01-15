@@ -41,7 +41,7 @@
     "@openmrs/esm-service-queues-app": "9.2.1-pre.7466",
     "@openmrs/esm-system-admin-app": "4.2.2-pre.414",
     "@openmrs/esm-user-onboarding-app": "4.0.1-pre.306",
-    "@openmrs/esm-ward-app": "9.2.1-pre.7497"
+    "@openmrs/esm-ward-app": "9.2.1-pre.7511"
   },
   "configUrls":[
     "site/base-config.json",
