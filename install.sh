@@ -16,4 +16,6 @@ fi
 mvn clean compile
 rm -r ~/openmrs/$1/frontend
 cp -r target/dist ~/openmrs/$1/frontend
-ln -s ~/openmrs/$1/configuration/frontend ~/openmrs/$1/frontend/site
+for f in ~/openmrs/$1/configuration/frontend/*; do
+    ln -s "$f" ~/openmrs/$1/frontend/"$(basename "$f")"
+done

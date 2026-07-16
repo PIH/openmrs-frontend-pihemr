@@ -44,8 +44,8 @@
     "@openmrs/esm-ward-app": "next"
   },
   "configUrls":[
-    "site/base-config.json",
-    "site/config.json"
+    "base-config.json",
+    "config.json"
   ],
   "supportOffline": false
 }
