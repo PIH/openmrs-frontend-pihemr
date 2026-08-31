@@ -1,0 +1,28 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  build-and-publish:
+    if: github.repository_owner == 'PIH'
+    concurrency:
+      group: build-and-deploy-${{ github.ref }}
+      cancel-in-progress: true
+    uses: PIH/openmrs-contrib-distro-tools/.github/workflows/build-and-deploy-to-sonatype.yml@main
+    secrets: inherit
+
+  trigger-pihemr-build:
+    if: github.repository_owner == 'PIH'
+    needs: build-and-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger pihemr build
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.GHA_WRITE_TOKEN }}
+          repository: PIH/pihemr
+          event-type: dependency-trigger
