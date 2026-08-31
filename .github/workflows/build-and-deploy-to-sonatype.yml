@@ -3,6 +3,10 @@ name: Build and deploy
 on:
   push:
     branches: [main]
+  # Most changes affecting this build come from npm dependencies rather than commits to this
+  # repo, so rebuild on a schedule to pick those up rather than relying on push alone.
+  schedule:
+    - cron: '0 9 * * 1-5'
   workflow_dispatch:
   repository_dispatch:
 
