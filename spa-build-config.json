@@ -1,5 +1,6 @@
 {
   "frontendModules":{
+    "@pih/esm-audit-app":"next",
     "@pih/esm-commons-app":"next",
     "@pih/esm-referrals-queue-app":"next",
 
