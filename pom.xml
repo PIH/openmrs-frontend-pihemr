@@ -81,6 +81,40 @@
                             <goal>run</goal>
                         </goals>
                     </execution>
+                    <!-- Merge spa-build-config.json and every spa-build-config.<country>.json into one config for assemble -->
+                    <execution>
+                        <id>aggregate-country-build-configs</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <target>
+                                <exec executable="${project.build.directory}/node/node" failonerror="true">
+                                    <arg value="scripts/country-build-configs.mjs" />
+                                    <arg value="aggregate" />
+                                    <arg value="target/spa-build-config.all.json" />
+                                </exec>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <!-- After assemble and build (generate-resources): split the importmap and routes registry per country -->
+                    <execution>
+                        <id>split-country-importmaps</id>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <target>
+                                <exec executable="${project.build.directory}/node/node" failonerror="true">
+                                    <arg value="scripts/country-build-configs.mjs" />
+                                    <arg value="split" />
+                                    <arg value="target/dist" />
+                                </exec>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -93,6 +127,8 @@
                 <executions>
                     <execution>
                         <id>install node and npm</id>
+                        <!-- earlier than the default (generate-resources): node is needed by the antrun steps before assemble -->
+                        <phase>initialize</phase>
                         <goals>
                             <goal>install-node-and-npm</goal>
                         </goals>
@@ -106,7 +142,7 @@
                             <goal>npx</goal>
                         </goals>
                         <configuration>
-                            <arguments>--legacy-peer-deps openmrs@next assemble --mode config --config spa-build-config.json --target target/dist</arguments>
+                            <arguments>--legacy-peer-deps openmrs@next assemble --mode config --config target/spa-build-config.all.json --target target/dist</arguments>
                         </configuration>
                     </execution>
                     <execution>
