@@ -43,6 +43,7 @@
     "@openmrs/esm-user-onboarding-app": "next",
     "@openmrs/esm-ward-app": "next"
   },
+  "_comment": "Note that configUrls and supportOffline are global. spa-build-config.<COUNTRY>.json may not override them. See README.md",
   "configUrls":[
     "base-config.json",
     "config.json"
